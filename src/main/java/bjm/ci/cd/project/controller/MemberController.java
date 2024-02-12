@@ -11,7 +11,7 @@ public class MemberController {
     private final MemberService memberService;
     @GetMapping("")
     public String hello(){
-        return "hello ";
+        return "hello";
     }
 
     @PostMapping("/add")
