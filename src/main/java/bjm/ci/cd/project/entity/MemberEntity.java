@@ -8,10 +8,13 @@ import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@EntityListeners(AuditingEntityListener.class)
 @Entity(name = "members")
 public class MemberEntity {
     @Id
@@ -25,7 +28,9 @@ public class MemberEntity {
 
     @Builder
     public MemberEntity(String nickname){
+
         this.nickname = nickname;
+
     }
 
 
