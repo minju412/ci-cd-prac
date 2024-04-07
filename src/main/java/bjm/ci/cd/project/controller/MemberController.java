@@ -17,6 +17,8 @@ public class MemberController {
         return "hello";
     }
 
+
+    
     @PostMapping("/add")
     public void addMember(@RequestParam(value = "nickname") String nickname){
         memberService.addMember(nickname);
